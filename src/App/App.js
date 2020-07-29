@@ -14,10 +14,23 @@ class App extends Component {
         notes: [],
         folders: []
     };
+fetchNotes = (e) => {
+    const notesUrl = `http://localhost:9090/notes`;
+    fetch (notesUrl) 
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
 
+fetchFolders = (e) => {
+    const folderUrl = `http://localhost:9090/folders`;
+    fetch (folderUrl)
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
     componentDidMount() {
         // fake date loading from API call
-        setTimeout(() => this.setState(dummyStore), 600);
+       // setTimeout(() => this.setState(dummyStore), 600);
+       this.fetchNotes();
     }
 
     renderNavRoutes() {
@@ -103,6 +116,8 @@ class App extends Component {
             </div>
         );
     }
+
+    //fetch(http://localhost:1234/foo/${fooId}, { method: 'DELETE', headers: { 'content-type': 'application/json' }, })
 }
 
 export default App;
