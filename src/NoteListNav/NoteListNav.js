@@ -7,12 +7,12 @@ import './NoteListNav.css'
 import UserContext from '../UserContext';
 
 class NoteListNav extends React.Component {
+  
 static contextType = UserContext;
   //static
  render(){
-   const {folders = [],
-    notes = [] } = this.context;
- }
+   const {folders=[],notes=[] } = this.context;
+ 
   return (
     <div className='NoteListNav'>
       <ul className='NoteListNav__list'>
@@ -45,6 +45,6 @@ static contextType = UserContext;
     </div>
   )
 }
-
+}
 
 export default NoteListNav;

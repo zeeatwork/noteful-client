@@ -5,7 +5,7 @@ import NoteListNav from '../NoteListNav/NoteListNav';
 import NotePageNav from '../NotePageNav/NotePageNav';
 import NoteListMain from '../NoteListMain/NoteListMain';
 import NotePageMain from '../NotePageMain/NotePageMain';
-// import UserContext from '../UserContext';
+import UserContext from '../UserContext';
 import config from '../config';
 import {getNotesForFolder, findNote, findFolder} from '../notes-helpers'; //delete eventually
 import './App.css';
@@ -62,8 +62,7 @@ class App extends Component {
                         key={path}
                         path={path}
                         component={NoteListNav}
-                            />
-                        )}
+                            
                     />
                 ))}
                 <Route path="/note/:noteId" component={NotePageNav} />
@@ -116,7 +115,7 @@ class App extends Component {
             deleteNote: this.handleDeleteNote,
         }
         return (
-            <ApiContext.Provider value={value}>
+            <UserContext.Provider value={value}>
             <div className="App">
                 <nav className="App__nav">{this.renderNavRoutes()}</nav>
                 <header className="App__header">
@@ -127,7 +126,7 @@ class App extends Component {
                 </header>
                 <main className="App__main">{this.renderMainRoutes()}</main>
             </div>
-           </ApiContext.Provider> 
+           </UserContext.Provider> 
         );
     }
 
