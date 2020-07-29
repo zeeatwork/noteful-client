@@ -5,8 +5,9 @@ import NoteListNav from '../NoteListNav/NoteListNav';
 import NotePageNav from '../NotePageNav/NotePageNav';
 import NoteListMain from '../NoteListMain/NoteListMain';
 import NotePageMain from '../NotePageMain/NotePageMain';
-import dummyStore from '../dummy-store';
-import {getNotesForFolder, findNote, findFolder} from '../notes-helpers';
+// import UserContext from '../UserContext';
+// import config from '../config';
+import {getNotesForFolder, findNote, findFolder} from '../notes-helpers'; //delete eventually
 import './App.css';
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
         notes: [],
         folders: []
     };
+
 fetchNotes = (e) => {
     const notesUrl = `http://localhost:9090/notes`;
     fetch (notesUrl) 
@@ -28,6 +30,7 @@ fetchFolders = (e) => {
     .then(data => console.log(data))
 }
     componentDidMount() {
+        //load fetch statements here
         // fake date loading from API call
        // setTimeout(() => this.setState(dummyStore), 600);
        this.fetchNotes();

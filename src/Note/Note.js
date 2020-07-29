@@ -3,8 +3,18 @@ import { Link } from 'react-router-dom'
 import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Note.css'
+//import API
+//import confgig
 
 export default function Note(props) {
+  //export default class Note extends React.Component
+  //static 
+  //onDelete
+
+  //handledelete()
+  //fetch DELETE
+  //tie in button
+
   return (
     <div className='Note'>
       <h2 className='Note__title'>

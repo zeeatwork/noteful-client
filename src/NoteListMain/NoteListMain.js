@@ -2,10 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Note from '../Note/Note'
-import CircleButton from '../CircleButton/CircleButton'
+import CircleButton from '../CircleButton/CircleButton' 
 import './NoteListMain.css'
+//import ApiContext
 
 export default function NoteListMain(props) {
+// export default class NotePageMain extends React.Component
+//static API
+
   return (
     <section className='NoteListMain'>
       <ul>

@@ -2,8 +2,12 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CircleButton from '../CircleButton/CircleButton'
 import './NotePageNav.css'
+//import APIContext
 
 export default function NotePageNav(props) {
+  //export default class NotePageNav extends React.Component
+  //static context
+
   return (
     <div className='NotePageNav'>
       <CircleButton
